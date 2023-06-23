@@ -5,6 +5,7 @@ int sum(int n)
     if (n == 0)
     {
         printf("Invalid input!");
+        return 0;
     }
     else if (n == 1)
     {
