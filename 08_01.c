@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-void printmatrix(int arr[], int rows, int columns)
+void printmatrix(int arr[][], int rows, int columns)
 {
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < columns; j++)
         {
-            printf("%d ", arr[i][j]);
+            printf("%d ", arr[i][j]); //error
         }
         printf("\n");
     }
@@ -25,7 +25,7 @@ int main()
         }
     }
 
-    printmatrix(marks, 3, 2);
+    printmatrix(&marks[0][0], 3, 2); //error
 
     return 0;
 }
