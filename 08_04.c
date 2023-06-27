@@ -1,23 +1,28 @@
 #include <stdio.h>
 
-int reverse(int arr[], int length)
+void reverse(int *arr, int length)
 {
-    int new_arr[length], *ptr = &new_arr[0];
+    int temp;
 
-    for (int i = length - 1; i >= 0; i--)
+    for (int i = 0; i < (length/2); i++)
     {
-        ptr = arr[i];
-        ptr++;
+        // arr[i] <=> arr[length - i - 1]
+        temp = arr[i];
+        arr[i] = arr[length - i - 1];
+        arr[length - i - 1] = temp; 
     }
-
-    return new_arr[length];
 }
 
 int main()
 {
     int arr[4] = {56, 78, 12, 42};
 
-    
+    reverse(arr, 4);
+
+    for (int i = 0; i < 4; i++)
+    {
+        printf("Element %d: %d\n", i + 1, arr[i]);
+    }    
 
     return 0;
 }
