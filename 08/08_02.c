@@ -20,5 +20,6 @@ int main()
 
     printf("%d", strcmp(ptr_1, ptr_2));
 
+
     return 0;
 }
