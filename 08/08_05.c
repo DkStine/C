@@ -3,7 +3,7 @@
 void copy(char *source, int len)
 {
     int i = 0;
-    char target[len];
+    char *target;
 
     while (i < len)
     {
