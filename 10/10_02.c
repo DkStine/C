@@ -13,5 +13,7 @@ int main()
         printf("%d\n", i);
     }
 
+    fclose(ptr);
+
     return 0;
 }
