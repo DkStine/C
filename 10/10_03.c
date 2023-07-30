@@ -15,5 +15,7 @@ int main()
         i++;
     }
 
+    fclose(ptr);
+
     return 0;
 }
