@@ -4,6 +4,7 @@ int main()
 {
     FILE *ptr;
     ptr = fopen("employee.csv", "w");
+    fprintf(ptr, "Name, Salary\n");
 
     int n, i = 0;
     printf("Enter no. of employees: ");
